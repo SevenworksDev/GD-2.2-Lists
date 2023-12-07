@@ -1,5 +1,5 @@
 CREATE TABLE `lists` (
-  `id` int(11) NOT NULL,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(50) NOT NULL,
   `description` text DEFAULT NULL,
   `version` int(11) DEFAULT 1,
