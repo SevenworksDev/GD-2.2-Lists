@@ -18,4 +18,25 @@ extra info:
 
 value info
 1:<id>:2:<name>:3:<description in base64>:5:<version>:49:<accountid>:50:<username>:10:<downloads>:7:<difficulty>:14:<likes>:19:<featuredIdx>:51:<levels>:55:0:56:0:28:<uploaded timestamp>:29:<updated timestamp>
+
+in case i use a shitty old db hosting site:
+
+CREATE TABLE `lists` (
+  `id` int(11) NOT NULL,
+  `name` varchar(50) NOT NULL,
+  `description` text DEFAULT NULL,
+  `version` int(11) DEFAULT 1,
+  `accountid` int(11) DEFAULT NULL,
+  `username` varchar(16) DEFAULT NULL,
+  `downloads` int(11) DEFAULT 0,
+  `difficulty` int(11) DEFAULT -1,
+  `likes` int(11) DEFAULT 0,
+  `featuredIdx` int(11) DEFAULT NULL,
+  `levels` varchar(170) DEFAULT NULL,
+  `created_at` timestamp NOT NULL DEFAULT current_timestamp()
+);
+
+
+$dateTimeUploaded = new DateTime($row['uploaded_timestamp']);
+$dateTimeUpdated = new DateTime($row['uploaded_timestamp']);
 ```
