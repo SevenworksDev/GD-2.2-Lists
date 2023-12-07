@@ -1,7 +1,9 @@
 <?php
 include 'config.php';
 
-$query = "SELECT * FROM lists";
+$page = isset($_POST['page']) ? max(0, intval($_POST['page'])) : 0;
+$offset = $page * 10;
+$query = "SELECT * FROM lists LIMIT $offset, 10";
 $result = $mysqli->query($query);
 
 if ($result->num_rows > 0) {
