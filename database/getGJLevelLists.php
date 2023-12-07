@@ -1,11 +1,5 @@
 <?php
-# havent tested much yet
-$host = "localhost";
-$username = "root";
-$password = "Tw0_Truck$";
-$database = "lists";
-$mysqli = new mysqli($host, $username, $password, $database);
-if ($mysqli->connect_error) { die("Connection failed: " . $mysqli->connect_error); }
+include 'config.php';
 
 $query = "SELECT * FROM lists";
 $result = $mysqli->query($query);
