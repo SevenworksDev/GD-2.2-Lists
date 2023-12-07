@@ -9,7 +9,7 @@ CREATE TABLE `lists` (
   `difficulty` int(11) DEFAULT -1,
   `likes` int(11) DEFAULT 0,
   `featuredIdx` int(11) DEFAULT NULL,
-  `levels` varchar(50) DEFAULT NULL,
+  `levels` varchar(170) DEFAULT NULL,
   `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
   `updated_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
 );
