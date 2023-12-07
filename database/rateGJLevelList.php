@@ -22,7 +22,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         if (!$featured) {
             $updateFeaturedQuery = "UPDATE lists SET featuredIdx = NULL WHERE id = $listId";
             if (!$mysqli->query($updateFeaturedQuery)) {
-                echo "Error updating featured index: " . $mysqli->error;
+                echo "-1";
             }
         }
 
